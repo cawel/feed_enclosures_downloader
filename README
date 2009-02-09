@@ -1,5 +1,17 @@
 == Usage == 
 
-add your RSS feeds to the rss_links file and run the following:
+add your RSS feeds to the 'rss_links' file and run the following:
 
 ruby downloader.rb
+
+This will download the enclosure of the first item for each feed link in the 'rss_links' file. The data will be put in a directory named 'downloads', in a subdirectory named after the feed description.
+
+
+== Motivation ==
+
+I needed this because some of my feeds get updated every day (e.g. for a daily chronique) and only carry the 'post of the day' (with no history whatsoever). This means that if you miss a day, there is no way to get the data from that day again.
+
+The info is served as an feed item enclosure (an mp3 file in this case), so I needed a script to fetch that mp3 every day. 
+
+Now all I need to do, is setup a cron job which runs my downloader script.
+
