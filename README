@@ -1,2 +1,5 @@
 == Usage == 
+
+add your RSS feeds to the rss_links file and run the following:
+
 ruby downloader.rb
